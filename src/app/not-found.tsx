@@ -11,7 +11,7 @@ export default function NotFound() {
         description="The page you are looking for does not exist or has been moved."
         icon={<FileQuestion className="h-10 w-10 text-muted-foreground" />}
         action={
-          <Button asChild>
+          <Button>
             <Link href="/">Return Home</Link>
           </Button>
         }

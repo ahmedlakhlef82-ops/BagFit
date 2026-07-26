@@ -6,6 +6,7 @@ import { ReactQueryProvider } from '@/providers/react-query-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/sonner';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -37,10 +38,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <Header />
-            <main className="flex-1 container py-8">{children}</main>
-            <Footer />
-            <Toaster />
+            <TooltipProvider>
+              <Header />
+              <main className="flex-1 container py-8">{children}</main>
+              <Footer />
+              <Toaster />
+            </TooltipProvider>
           </ReactQueryProvider>
         </ThemeProvider>
       </body>

@@ -34,7 +34,7 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild className="w-full">
+            <Button className="w-full">
               <Link href="/airlines">Search Airlines</Link>
             </Button>
           </CardContent>
@@ -49,7 +49,7 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild variant="outline" className="w-full">
+            <Button variant="outline" className="w-full">
               <Link href="/measure">Measure Now</Link>
             </Button>
           </CardContent>
@@ -64,7 +64,7 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild variant="secondary" className="w-full">
+            <Button variant="secondary" className="w-full">
               <Link href="/dashboard">Go to Dashboard</Link>
             </Button>
           </CardContent>
