@@ -13,6 +13,7 @@ export interface BaggagePolicy {
   size_unit: SizeUnit;
   weight_unit: WeightUnit;
   name: string; // e.g., "Standard Economy Cabin Bag"
+  notes?: string;
 }
 
 export interface Airline {
