@@ -9,12 +9,16 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
   ({ className, ...props }, ref) => {
     return (
       <div className={cn('relative flex w-full items-center', className)}>
-        <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
+        <Search
+          className="absolute left-2.5 h-4 w-4 text-muted-foreground"
+          aria-hidden="true"
+        />
         <Input
           type="search"
           placeholder="Search..."
           className="pl-9"
           ref={ref}
+          aria-label="Search input"
           {...props}
         />
       </div>
