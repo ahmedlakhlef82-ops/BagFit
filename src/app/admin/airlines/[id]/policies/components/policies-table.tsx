@@ -85,7 +85,7 @@ export function PoliciesTable({ airlineId, policies }: { airlineId: string, poli
                   </TableCell>
                   <TableCell className="text-right">
                     <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
+                      <DropdownMenuTrigger>
                         <Button variant="ghost" className="h-8 w-8 p-0">
                           <span className="sr-only">Open menu</span>
                           <Settings className="h-4 w-4" />

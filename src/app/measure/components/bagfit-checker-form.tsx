@@ -97,7 +97,7 @@ function BagFitCheckerFormInner() {
   const watchAirlineId = form.watch('airlineId');
   const selectedAirline = airlines?.find((a) => a.id === watchAirlineId);
 
-  function onSubmit(data: Record<string, any>) {
+  function onSubmit(data: any) {
     const parsedData = data as BagFormData;
     if (!selectedAirline || !selectedAirline.policies) return;
 

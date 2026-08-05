@@ -1,0 +1,25 @@
+
+> bagfit@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.22
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 8.3s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./src/app/admin/airlines/[id]/policies/components/policy-dialog.tsx:61:5
+Type error: Type 'Resolver<{ name: string; type: "personal" | "cabin" | "checked"; max_length: unknown; max_width: unknown; max_height: unknown; max_weight: unknown; size_unit: "cm" | "in"; weight_unit: "kg" | "lb"; notes?: string | undefined; }, any, { ...; }>' is not assignable to type 'Resolver<{ name: string; type: "personal" | "cabin" | "checked"; max_length: number; max_width: number; max_height: number; max_weight: number; size_unit: "cm" | "in"; weight_unit: "kg" | "lb"; notes?: string | undefined; }, any, { ...; }>'.
+  Types of parameters 'options' and 'options' are incompatible.
+    Type 'ResolverOptions<{ name: string; type: "personal" | "cabin" | "checked"; max_length: number; max_width: number; max_height: number; max_weight: number; size_unit: "cm" | "in"; weight_unit: "kg" | "lb"; notes?: string | undefined; }>' is not assignable to type 'ResolverOptions<{ name: string; type: "personal" | "cabin" | "checked"; max_length: unknown; max_width: unknown; max_height: unknown; max_weight: unknown; size_unit: "cm" | "in"; weight_unit: "kg" | "lb"; notes?: string | undefined; }>'.
+      Type 'unknown' is not assignable to type 'number'.
+
+[0m [90m 59 |[39m
+ [90m 60 |[39m   [36mconst[39m form [33m=[39m useForm[33m<[39m[33mPolicyFormData[39m[33m>[39m({
+[31m[1m>[22m[39m[90m 61 |[39m     resolver[33m:[39m zodResolver(policySchema)[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 62 |[39m     defaultValues[33m:[39m {
+ [90m 63 |[39m       name[33m:[39m initialData[33m?[39m[33m.[39mname [33m||[39m [32m''[39m[33m,[39m
+ [90m 64 |[39m       type[33m:[39m initialData[33m?[39m[33m.[39mtype [33m||[39m [32m'cabin'[39m[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null
